@@ -56,3 +56,45 @@ Revenue figures represent product sales values excluding shipping costs. The ana
 - Customer segmentation analysis
 - Data visualization and dashboard creation
 - Further investigation of seasonal trends
+- ## How to Run This Project
+
+### 1. Download the Dataset
+
+Download the Brazilian E-Commerce Public Dataset by Olist from Kaggle:
+
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+### 2. Install SQLite
+
+Install DB Browser for SQLite:
+
+https://sqlitebrowser.org/
+
+### 3. Create the Database
+
+1. Open DB Browser for SQLite.
+2. Create a new database named `ecommerce_analysis.db`.
+3. Go to File > Import > Table from CSV file.
+4. Import the following CSV files:
+
+| CSV File | SQLite Table Name |
+|---|---|
+| olist_orders_dataset.csv | orders |
+| olist_order_items_dataset.csv | order_items |
+| olist_products_dataset.csv | products |
+| product_category_name_translation.csv | category_translation |
+
+Make sure "Column names in first line" is enabled and the field separator is a comma.
+
+### 4. Run the SQL Queries
+
+1. Open `ecommerce_analysis.db` in DB Browser for SQLite.
+2. Navigate to the Execute SQL tab.
+3. Open `01_orders_analysis.sql` or `02_sales_analysis.sql`.
+4. Execute the queries individually to explore the results.
+
+### 5. Explore the Findings
+
+The analyses cover order trends, product sales, category performance, revenue growth, and Black Friday sales patterns.
+
+All monetary figures are reported in Brazilian Real (BRL). Product sales values exclude shipping costs.
